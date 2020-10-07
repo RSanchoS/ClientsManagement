@@ -1,0 +1,18 @@
+server:
+  port: 8001
+  servlet:
+   context-path: /api/v0.1
+  
+spring:
+ datasource:
+  url: jdbc:h2:mem:testdb
+  driverClassName: org.h2.Driver
+  username: sa
+  password: password
+
+ jpa:
+  database-platform: org.hibernate.dialect.H2Dialect
+
+jwt:
+  timeout: 50000
+  secret: my@secret1

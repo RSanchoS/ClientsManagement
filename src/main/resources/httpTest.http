@@ -1,0 +1,53 @@
+POST http://localhost:8001/api/v0.1/login HTTP/1.1
+Content-Type: application-json
+
+{
+    "user": "user1@a.com",
+    "password": "password1"
+}
+
+POST http://localhost:8001/api/v0.1/login HTTP/1.1
+Content-Type: application-json
+
+{
+    "user": "user2@a.com",
+    "password": "password2"
+}
+
+
+GET http://localhost:8001/api/v0.1/client HTTP/1.1
+Authorization: 
+
+GET http://localhost:8001/api/v0.1/client/email/user1@a.com HTTP/1.1
+Authorization: 
+
+GET http://localhost:8001/api/v0.1/client/birthDate?firstDate=1999-09-30T12:47:29&finalDate=2000-10-30T12:47:29 HTTP/1.1
+Authorization: 
+
+GET http://localhost:8001/api/v0.1/client/birthDate?firstDate=2000-10-01T12:47:29&finalDate=2000-10-30T12:47:29 HTTP/1.1
+Authorization: 
+
+
+POST http://localhost:8001/api/v0.1/client HTTP/1.1
+Content-Type: application/json 
+Authorization: 
+
+
+  {
+    "email": "user5@a.com",
+    "name": "User",
+    "surname": "E",
+    "birthDate": "2000-09-30T12:47:29+02:00"
+  }
+
+DELETE  http://localhost:8001/api/v0.1/client HTTP/1.1
+Content-Type: application/json 
+Authorization: 
+
+  {
+    "id": 5,  
+    "email": "user5@a.com",
+    "name": "User",
+    "surname": "E",
+    "birthDate": "2000-09-30T12:47:29+02:00"
+  }
